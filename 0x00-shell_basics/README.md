@@ -1,1 +1,1 @@
-to creat  a script that creates a directory named my_first_directory in the /tmp/ directory
+to creat  a script that move the file betty from /tmp/ to /tmp/my_first_directory
