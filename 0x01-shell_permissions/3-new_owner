@@ -1,2 +1,2 @@
-#!/bin/babsh
+#!/bin/bash
 chown betty hello
