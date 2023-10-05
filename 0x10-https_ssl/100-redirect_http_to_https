@@ -1,0 +1,7 @@
+frontend http-redirect
+    bind *:80
+    mode http
+    option forwardfor
+    reqadd X-Forwarded-Proto:\ http
+    redirect scheme https if !{ ssl_fc }
+
