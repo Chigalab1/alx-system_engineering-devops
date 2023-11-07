@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Task 3"""
+"""Count it"""
 
 
 def count_words(subreddit, word_list, word_count={}, after=None):
-    """ecursive function that queries the Reddit API, parses the title of all
-	hot articles, and prints a sorted count of given keyword"""
+    """Queries the Reddit API and returns the count of words in
+    word_list in the titles of all the hot posts
+    of the subreddit"""
     import requests
 
     sub_info = requests.get("https://www.reddit.com/r/{}/hot.json"
@@ -29,8 +30,8 @@ def count_words(subreddit, word_list, word_count={}, after=None):
     if word_count == {}:
         word_count = {word: 0 for word in word_list}
 
-    for title in hot_l:
-        split_words = title.split(' ')
+    for tit in hot_l:
+        split_words = tit.split(' ')
         for word in word_list:
             for s_word in split_words:
                 if s_word.lower() == word.lower():
