@@ -30,8 +30,8 @@ def count_words(subreddit, word_list, word_count={}, after=None):
     if word_count == {}:
         word_count = {word: 0 for word in word_list}
 
-    for tit in hot_l:
-        split_words = tit.split(' ')
+    for title in hot_l:
+        split_words = title.split(' ')
         for word in word_list:
             for s_word in split_words:
                 if s_word.lower() == word.lower():
