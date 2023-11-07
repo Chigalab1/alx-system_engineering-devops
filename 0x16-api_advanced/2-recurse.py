@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Recurse it"""
+"""Module for task 2"""
 
 
 def recurse(subreddit, hot_list=[], count=0, after=None):
